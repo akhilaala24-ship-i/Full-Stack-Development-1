@@ -1,1 +1,55 @@
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Types Demonstration</title>
+
     
+    <style>
+        .internal {
+            padding: 20px;
+            border: 2px solid blue;
+            background-color: lightblue;
+        }
+    
+    </style>
+
+    
+    <link rel="stylesheet" href="3c.css">
+</head>
+
+<body>
+
+<h1>CSS Types Demonstration</h1>
+
+
+<div style="padding: 20px; border: 2px solid orange; background-color: lightyellow;">
+    <h2>1. Inline Style</h2>
+    <p>
+        This box is styled using an inline style="..." attribute directly on the element.
+    </p>
+</div>
+
+<br>
+
+
+<div class="internal">
+    <h2>2. Internal Style</h2>
+    <p>
+        This box is styled using a &lt;style&gt; block located in the
+        &lt;head&gt; of this HTML document.
+    </p>
+</div>
+
+<br>
+
+
+<div class="external">
+    <h2>3. External Style</h2>
+    <p>
+        This box is styled using an external CSS file (exp_c.css)
+        linked via the &lt;link&gt; tag.
+    </p>
+</div>
+
+</body>
+</html>
