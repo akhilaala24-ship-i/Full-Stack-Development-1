@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selector Forms</title>
+
+    <style>
+
+        h1 {
+            color: blue;
+        }
+
+        #p1 {
+            color: green;
+        }
+
+        .box {
+            background-color: yellow;
+        }
+
+        h2, h3 {
+            color: purple;
+        }
+
+        * {
+            font-family: Arial;
+        }
+
+        div p {
+            color: brown;
+        }
+
+        div > b {
+            color: red;
+        }
+
+        h4 + p {
+            background-color: lightblue;
+        }
+
+        h5 ~ p {
+            color: orange;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        input:focus {
+            background-color: lightgreen;
+        }
+
+        p::first-letter {
+            color: red;
+        }
+
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+
+        input[type="password"] {
+            border: 2px solid green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selectors</h1>
+
+    <h2>Simple Selectors</h2>
+
+    <p id="p1">ID Selector</p>
+
+    <div class="box">Class Selector</div>
+
+    <h3>Group Selector</h3>
+
+
+    <h2>Combinator Selectors</h2>
+
+    <div>
+        <p>Descendant Selector</p>
+    </div>
+
+    <div>
+        <b>Child Selector</b>
+    </div>
+
+    <h4>Heading</h4>
+    <p>Adjacent Sibling</p>
+
+    <h5>Heading</h5>
+    <p>General Sibling 1</p>
+    <p>General Sibling 2</p>
+
+
+    <h2>Pseudo-class</h2>
+
+    <a href="#">Move mouse here</a>
+
+    <br><br>
+
+    <input type="text" placeholder="Click here">
+
+
+    <h2>Pseudo-element</h2>
+
+    <p>This is a paragraph.</p>
+
+
+    <h2>Attribute Selector</h2>
+
+    <input type="text" placeholder="Name">
+
+    <br><br>
+
+    <input type="password" placeholder="Password">
+
+</body>
+</html>
