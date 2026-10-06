@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object</title>
+</head>
+<body>
+
+<h2>RegExp Object Example</h2>
+
+<p id="demo"></p>
+
+<script>
+    let text = "I am learning JavaScript";
+    let pattern = /JavaScript/;
+
+   
+    let result = pattern.test(text);
+
+    document.getElementById("demo").innerHTML =
+        "Text: " + text +
+        "<br>Pattern Found: " + result;
+</script>
+
+</body>
+</html>

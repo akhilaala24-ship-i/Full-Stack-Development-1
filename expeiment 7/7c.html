@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object</title>
+</head>
+<body>
+
+<h2>Array Object Example</h2>
+
+<p id="demo"></p>                     
+
+<script>
+    let fruits = ["Apple", "Mango", "Orange"];
+
+   
+    let size = fruits.length;
+
+    
+    fruits.push("Banana");
+    fruits.pop();
+
+    document.getElementById("demo").innerHTML =
+        "Fruits: " + fruits.join(", ") +
+        "<br>Array Length: " + size;
+</script>
+
+</body>
+</html>

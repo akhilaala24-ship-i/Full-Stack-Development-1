@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object</title>
+</head>
+<body>
+
+<h2>Window Object Example</h2>
+
+<button onclick="showMessage()">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+    function showMessage() {
+        document.getElementById("demo").innerHTML =
+            "Window Width: " + window.innerWidth +
+            "<br>Window Height: " + window.innerHeight;
+
+        
+        window.alert("Hello! This is Window Object.");
+    }
+</script>
+
+</body>
+</html>

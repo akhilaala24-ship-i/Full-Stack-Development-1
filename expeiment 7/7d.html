@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object</title>
+</head>
+<body>
+
+<h2>Math Object Example</h2><!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+</head>
+<body>
+
+<h2>User-Defined Object Example</h2>
+
+<p id="demo"></p>
+
+<script>
+    // Constructor
+    function Student(name, age) {
+
+        // Properties
+        this.name = name;
+        this.age = age;
+
+        // Method
+        this.display = function() {
+            return "Name: " + this.name +
+                   "<br>Age: " + this.age;
+        };
+
+        
+        this.getName = function() {
+            return this.name;
+        };
+
+        
+        this.setName = function(newName) {
+            this.name = newName;
+        };
+    }
+
+    
+    let student = new Student("Akhila", 20);
+
+    
+    student.setName("Akhila");
+
+    
+    document.getElementById("demo").innerHTML =
+        student.display();
+</script>
+
+</body>
+</html>
+
+<p id="demo"></p>
+
+<script>
+    let number = 25.7;
+
+    document.getElementById("demo").innerHTML =
+        "PI = " + Math.PI +
+        "<br>Square Root = " + Math.sqrt(25) +
+        "<br>Round = " + Math.round(number) +
+        "<br>Maximum = " + Math.max(10, 20, 30);
+</script>
+
+</body>
+</html>

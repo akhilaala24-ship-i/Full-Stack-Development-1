@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+</head>
+<body>
+
+<h2>User-Defined Object Example</h2>
+
+<p id="demo"></p>
+
+<script>
+    
+    function Student(name, age) {
+
+       
+        this.name = name;
+        this.age = age;
+
+        
+        this.display = function() {
+            return "Name: " + this.name +
+                   "<br>Age: " + this.age;
+        };
+
+        
+        this.getName = function() {
+            return this.name;
+        };
+
+        
+        this.setName = function(newName) {
+            this.name = newName;
+        };
+    }
+
+    
+    let student = new Student("Akhila", 20);
+
+    
+    student.setName("Akhila");
+
+    
+    document.getElementById("demo").innerHTML =
+        student.display();
+</script>
+
+</body>
+</html>

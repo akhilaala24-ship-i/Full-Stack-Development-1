@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object</title>
+</head>
+<body>
+
+<h2>Date Object Example</h2>
+
+<p id="demo"></p>
+
+<script>
+    let today = new Date();
+
+    document.getElementById("demo").innerHTML =
+        "Today's Date: " + today.toDateString() +
+        "<br>Year: " + today.getFullYear() +
+        "<br>Month: " + (today.getMonth() + 1) +
+        "<br>Day: " + today.getDate();
+</script>
+
+</body>
+</html>
