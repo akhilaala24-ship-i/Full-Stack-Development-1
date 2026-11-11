@@ -5,24 +5,30 @@
 </head>
 <body>
 
-<h2>Array Object Example</h2>
+    <h2>JavaScript Array Object</h2>
 
-<p id="demo"></p>                     
+    <p id="result"></p>
 
-<script>
-    let fruits = ["Apple", "Mango", "Orange"];
+    <script>
+        let fruits = ["Apple", "Banana", "Mango"];
 
-   
-    let size = fruits.length;
+        let output = "Original Array: " + fruits +
+                     "<br>Array Length: " + fruits.length;
 
-    
-    fruits.push("Banana");
-    fruits.pop();
+        fruits.push("Orange");
+        output += "<br>After push(): " + fruits;
 
-    document.getElementById("demo").innerHTML =
-        "Fruits: " + fruits.join(", ") +
-        "<br>Array Length: " + size;
-</script>
+        fruits.pop();
+        output += "<br>After pop(): " + fruits;
+
+        fruits.sort();
+        output += "<br>After sort(): " + fruits;
+
+        fruits.reverse();
+        output += "<br>After reverse(): " + fruits;
+
+        document.getElementById("result").innerHTML = output;
+    </script>
 
 </body>
 </html>

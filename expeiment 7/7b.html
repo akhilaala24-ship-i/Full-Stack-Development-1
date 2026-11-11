@@ -5,22 +5,48 @@
 </head>
 <body>
 
-<h2>Window Object Example</h2>
+    <h2>JavaScript Window Object</h2>
 
-<button onclick="showMessage()">Click Me</button>
+    <button onclick="showProperties()">Show Properties</button>
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConfirm()">Confirm</button>
+    <button onclick="showPrompt()">Prompt</button>
 
-<p id="demo"></p>
+    <p id="result"></p>
 
-<script>
-    function showMessage() {
-        document.getElementById("demo").innerHTML =
-            "Window Width: " + window.innerWidth +
-            "<br>Window Height: " + window.innerHeight;
+    <script>
+        function showProperties() {
+            document.getElementById("result").innerHTML =
+                "Window Width: " + window.innerWidth +
+                "<br>Window Height: " + window.innerHeight +
+                "<br>Window Location: " + window.location.href;
+        }
 
-        
-        window.alert("Hello! This is Window Object.");
-    }
-</script>
+        function showAlert() {
+            window.alert("Welcome to JavaScript!");
+        }
+
+        function showConfirm() {
+            let choice = window.confirm("Do you want to continue?");
+
+            if (choice) {
+                document.getElementById("result").innerHTML =
+                    "You selected OK";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "You selected Cancel";
+            }
+        }
+
+        function showPrompt() {
+            let name = window.prompt("Enter your name:");
+
+            if (name != null) {
+                document.getElementById("result").innerHTML =
+                    "Welcome " + name;
+            }
+        }
+    </script>
 
 </body>
 </html>

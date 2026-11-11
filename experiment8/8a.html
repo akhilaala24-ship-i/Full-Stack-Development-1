@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number</title>
+</head>
+<body>
+
+<h2>Find Largest Number</h2>
+
+<script>
+    let a = parseInt(prompt("Enter first number:"));
+    let b = parseInt(prompt("Enter second number:"));
+    let c = parseInt(prompt("Enter third number:"));
+
+    if (a == b && b == c) {
+        alert("All numbers are equal");
+    }
+    else if (a >= b && a >= c) {
+        alert(a + " is the largest number");
+    }
+    else if (b >= a && b >= c) {
+        alert(b + " is the largest number");
+    }
+    else {
+        alert(c + " is the largest number");
+    }
+</script>
+
+</body>
+</html>

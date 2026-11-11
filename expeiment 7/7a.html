@@ -5,18 +5,33 @@
 </head>
 <body>
 
-<h2 id="heading">Document Object Example</h2>
+    <h2 id="heading">Welcome to JavaScript</h2>
+    <p id="para">This is a simple document object program.</p>
 
-<p id="demo"></p>
+    <button onclick="showDetails()">Click Here</button>
+    <button onclick="changeStyle()">Change Style</button>
 
-<script>
-    
-    document.getElementById("heading").style.color = "green";
+    <script>
+        function showDetails() {
+            
+            document.getElementById("heading").innerHTML =
+                "Document Object Properties";
 
-    
-    document.getElementById("demo").innerHTML =
-        "Title: " + document.title;
-</script>
+            
+            document.getElementById("para").innerHTML =
+                "Title: " + document.title +
+                "<br>URL: " + document.URL +
+                "<br>Domain: " + document.domain;
+        }
+
+        function changeStyle() {
+            
+            document.getElementById("heading").style.color = "green";
+            document.getElementById("para").style.fontSize = "20px";
+
+            document.write("Document Object Methods Demonstration");
+        }
+    </script>
 
 </body>
 </html>

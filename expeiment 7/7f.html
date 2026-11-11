@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RegExp Object</title>
+    <title>Regex Object</title>
 </head>
 <body>
 
-<h2>RegExp Object Example</h2>
+    <h2>JavaScript RegExp Object</h2>
 
-<p id="demo"></p>
+    <p id="result"></p>
 
-<script>
-    let text = "I am learning JavaScript";
-    let pattern = /JavaScript/;
+    <script>
+        let pattern = /JavaScript/i;
+        let str = "Welcome to javascript programming";
 
-   
-    let result = pattern.test(text);
+        let output = "Original String: " + str;
 
-    document.getElementById("demo").innerHTML =
-        "Text: " + text +
-        "<br>Pattern Found: " + result;
-</script>
+        output += "<br>Pattern: " + pattern.source;
+        output += "<br>Ignore Case: " + pattern.ignoreCase;
+
+        output += "<br>Test: " + pattern.test(str);
+        output += "<br>Match: " + str.match(pattern);
+
+        let newStr = str.replace(pattern, "HTML");
+        output += "<br>Replace: " + newStr;
+
+        document.getElementById("result").innerHTML = output;
+    </script>
 
 </body>
 </html>

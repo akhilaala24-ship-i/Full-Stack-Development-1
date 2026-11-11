@@ -5,20 +5,27 @@
 </head>
 <body>
 
-<h2>String Object Example</h2>
+    <h2>JavaScript String Object</h2>
 
-<p id="demo"></p>
+    <p id="result"></p>
 
-<script>
-    let name = "JavaScript";
+    <script>
+        let str = "Hello JavaScript";
 
-    document.getElementById("demo").innerHTML =
-        "String: " + name +
-        "<br>Length: " + name.length +
-        "<br>Uppercase: " + name.toUpperCase() +
-        "<br>Lowercase: " + name.toLowerCase() +
-        "<br>Character at 0: " + name.charAt(0);
-</script>
+        let output = "Original String: " + str;
+
+        output += "<br>Length: " + str.length;
+
+        output += "<br>Uppercase: " + str.toUpperCase();
+        output += "<br>Lowercase: " + str.toLowerCase();
+        output += "<br>Character at 0: " + str.charAt(0);
+        output += "<br>Index of Java: " + str.indexOf("Java");
+        output += "<br>Replace: " + str.replace("JavaScript", "World");
+        output += "<br>Substring: " + str.substring(0, 5);
+        output += "<br>Includes Java: " + str.includes("Java");
+
+        document.getElementById("result").innerHTML = output;
+    </script>
 
 </body>
 </html>

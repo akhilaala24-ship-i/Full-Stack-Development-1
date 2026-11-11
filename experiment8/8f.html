@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Denomination</title>
+</head>
+<body>
+
+<h2>Denomination Breakdown</h2>
+
+<script>
+    let amount = parseInt(prompt("Enter deposit amount:"));
+
+    let notes = [500, 200, 100, 50, 20, 10, 5, 1];
+
+    for(let note of notes) {
+        let count = Math.floor(amount / note);
+
+        document.write(note + " x " + count + "<br>");
+
+        amount = amount % note;
+    }
+</script>
+
+</body>
+</html>

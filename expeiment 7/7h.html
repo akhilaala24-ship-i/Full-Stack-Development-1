@@ -5,45 +5,40 @@
 </head>
 <body>
 
-<h2>User-Defined Object Example</h2>
+    <h2>JavaScript User Defined Object</h2>
 
-<p id="demo"></p>
+    <p id="result"></p>
 
-<script>
-    
-    function Student(name, age) {
+    <script>
+        function Student(name, age, marks) {
+            this.name = name;
+            this.age = age;
+            this.marks = marks;
 
-       
-        this.name = name;
-        this.age = age;
+            this.display = function() {
+                return "Name: " + this.name +
+                       "<br>Age: " + this.age +
+                       "<br>Marks: " + this.marks;
+            };
+        }
 
-        
-        this.display = function() {
-            return "Name: " + this.name +
-                   "<br>Age: " + this.age;
-        };
+        let s1 = new Student("Akhila", 20, 90);
 
-        
-        this.getName = function() {
-            return this.name;
-        };
+        Object.defineProperty(s1, "studentName", {
+            get: function() {
+                return this.name;
+            },
+            set: function(value) {
+                this.name = value;
+            }
+        });
 
-        
-        this.setName = function(newName) {
-            this.name = newName;
-        };
-    }
+        s1.studentName = "Akhila";
 
-    
-    let student = new Student("Akhila", 20);
-
-    
-    student.setName("Akhila");
-
-    
-    document.getElementById("demo").innerHTML =
-        student.display();
-</script>
+        document.getElementById("result").innerHTML =
+            s1.display() +
+            "<br>Accessor Name: " + s1.studentName;
+    </script>
 
 </body>
 </html>
