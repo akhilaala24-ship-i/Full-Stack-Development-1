@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Events</title>
+</head>
+<body>
+    <h2>JavaScript Functions and Events</h2>
+    <h3>1. Factorial</h3>
+    <input type="number" id="factNum" placeholder="Enter a number">
+    <button onclick="findFactorial()">Find Factorial</button>
+    <p id="factResult"></p>
+    <h3>2. Fibonacci Series</h3>
+    <input type="number" id="fibNum" placeholder="Enter number of terms">
+    <button onclick="findFibonacci()">Generate Series</button>
+    <p id="fibResult"></p>
+    <h3>3. Prime Number</h3>
+    <input type="number" id="primeNum" placeholder="Enter a number">
+    <button onclick="checkPrime()">Check Prime</button>
+    <p id="primeResult"></p>
+    <h3>4. Palindrome</h3>
+    <input type="number" id="palNum" placeholder="Enter a number">
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+    <p id="palResult"></p>
+    <script>
+        function findFactorial() {
+            let n = Number(document.getElementById("factNum").value);
+            let fact = 1;
+            if (document.getElementById("factNum").value === "" || n < 0 || !Number.isInteger(n)) {
+                document.getElementById("factResult").innerHTML = "Enter a valid non-negative integer";
+                return;
+            }
+            for (let i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+            document.getElementById("factResult").innerHTML =
+                "Factorial = " + fact;
+        }
+        function findFibonacci() {
+            let n = Number(document.getElementById("fibNum").value);
+            let a = 0, b = 1;
+            let series = "";
+            if (document.getElementById("fibNum").value === "" || n <= 0 || !Number.isInteger(n)) {
+                document.getElementById("fibResult").innerHTML = "Enter a valid positive integer";
+                return;
+            }
+            for (let i = 1; i <= n; i++) {
+                series += a + " ";
+                let c = a + b;
+                a = b;
+                b = c;
+            }
+            document.getElementById("fibResult").innerHTML =
+                "Fibonacci Series = " + series;
+        }
+        function checkPrime() {
+            let n = Number(document.getElementById("primeNum").value);
+            let flag = true;
+            if (document.getElementById("primeNum").value === "" || !Number.isInteger(n)) {
+                document.getElementById("primeResult").innerHTML = "Enter a valid integer";
+                return;
+            }
+            if (n <= 1) {
+                flag = false;
+            }
+            for (let i = 2; i < n; i++) {
+                if (n % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                document.getElementById("primeResult").innerHTML =
+                    n + " is a Prime Number";
+            } else {
+                document.getElementById("primeResult").innerHTML =
+                    n + " is not a Prime Number";
+            }
+        }
+        function checkPalindrome() {
+            let n = document.getElementById("palNum").value;
+            if (n === "" || !/^\d+$/.test(n)) {
+                document.getElementById("palResult").innerHTML = "Enter a valid non-negative number";
+                return;
+            }
+            let reverse = n.split("").reverse().join("");
+            if (n === reverse) {
+                document.getElementById("palResult").innerHTML =
+                    n + " is a Palindrome";
+            } else {
+                document.getElementById("palResult").innerHTML =
+                    n + " is not a Palindrome";
+            }
+        }
+    </script>
+</body>
+</html>
